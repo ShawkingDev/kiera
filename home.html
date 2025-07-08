@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Kiera</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="birthday-page">
+  <div class="birthday-message">
+    <h1>🎉 Happy Birthday Kiera 🎉</h1>
+    <p>You’re one of a kind, and today the world gets to celebrate you.  
+    May your day be filled with love, smiles, and magic ✨</p>
+    <p>— With all my heart ❤️</p>
+  </div>
+
+  <div class="hearts-container"></div>
+
+  <script>
+    // Floating hearts
+    const container = document.querySelector('.hearts-container');
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 3 + Math.random() * 5 + 's';
+      container.appendChild(heart);
+    }
+  </script>
+</body>
+</html>
